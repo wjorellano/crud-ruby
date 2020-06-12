@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="card mb-4 mv" style="max-width: 360px;"">
+    <div class="row no-gutters">
+      <div class="col-md-4 p-1">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/User_Circle.png" class="card-img">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <div class="form-group">
+            <strong>Nombre:</strong>
+            <%= @signup.name %>
+          </div>
+          <div class="form-group">
+            <strong>Apellido:</strong>
+            <%= @signup.surname %>
+          </div>
+          <div class="form-group">
+            <strong>Edad:</strong>
+            <%= @signup.age %>
+          </div>
+            <%= link_to 'Editar', edit_signup_path(@signup) %>
+            <%= link_to 'Atras', signups_path %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<div class="container col-md-8">
+  <h3 class="title">Listado de Regitros</h3>
+  <table class="table">
+    <thead class="thead-dark">
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellido</th>
+        <th scope="col">Edad</th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+    </thead>
+<% @signups.each do |signup| %>
+    <tbody>
+        <td><%= signup.name %></td>
+        <td><%= signup.surname %></td>
+        <td><%= signup.age %></td>
+        <td><%= link_to "Mostrar", signup%> &#128065;</td>
+        <td><%= link_to "Editar", edit_signup_path(signup)%> 	&#128221;</td>
+        <td><%= link_to "Eliminar", signup, method: :delete, data: {confirm: "Deseas eliminar eliminar este registro. "}%> &#10060;</td>
+    </tbody>
+    <% end %>
+  </table>
+  <%= link_to 'Nuevo registro', new_signup_path %>
+</div>
